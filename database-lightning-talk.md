@@ -1,6 +1,6 @@
 # databaes
 ## (no relation)
-##### lain (the/that)
+##### lain (this/that)
 
 ---
 
@@ -12,14 +12,12 @@ a lot of extremely smart people have spent decades figuring out the fastest, mos
 
 ---
 
-## files?
-
 ### "but i already have a filesystem!"
 #### that's valid.
 
-you can use that! but you would eventually start to have a very bad time as your application got larger and started doing more stuff.
+you can use that! but you will eventually start to have a very bad time as your application gets larger and starts doing more stuff.
 
-files are for larger chunks of binary or text data that is only going to change at rare intervals, intended to be accessed in human contexts.
+files are for discrete, standalone chunks of data that will only change at rare intervals, intended to be accessed in human contexts.
 
 ---
 
@@ -27,13 +25,16 @@ files are for larger chunks of binary or text data that is only going to change 
 
 ![[hackin.gif]]
 
+#### relational and non-relational
+
 ---
 
 ### relational??
+#### often "SQL"
 
 ![[postgresql-logo.png|200]]	![[mysql-logo.png|200]]
 
-very common, the "classic" database. relational databases use *relationships between data* as part of their structure. typically use SQL for queries.
+very common, the "classic" database. relational databases use *relationships between data* as part of their structure.
 
 ---
 
@@ -47,17 +48,22 @@ in practice this means defining *tables* in which each *row* inside the table ha
 
 ### relational~
 
-these data relationships can be very complex, and may result in lots of tables that exist just to define relationships. this set of relationships has to be carefully updated in tandem with your application as you create new behaviors and features.
+these data relationships can be very complex, and may result in lots of tables that exist just to define relationships.
+
+this set of relationships must be carefully updated in tandem with your application as you create new behaviors and features.
 
 ---
 
 ### nonrelational!!
+#### aka "NoSQL"
 
 ![[mongodb-logo.png|150]] ![[couchdb-logo.png|100]] ![[redis-logo.png|150]]
 
-most of the time, especially for webapps, you don't need all that junk. at some point someone said heck it and wrote some software that just put everything in one big bucket. no more tables!!
+most of the time, especially for webapps, you don't need all that junk.
 
-think of it like a big hash map.
+at some point someone said heck it and wrote some software that just put everything in one big bucket. no more tables!!
+
+think of it like a big hash map. 
 
 ---
 
@@ -75,7 +81,7 @@ simplified: every record in the database is a standalone *document*, referenced 
 
 ---
 
-benefits of relational database                 | benefits of non-relational database
+relational database                 | non-relational database
 ------------------------------------------------|------------------------------------
 well-defined structure enforces sanity          | absence of strict structure enables rapid development
 every relationship is explicit in the structure | links handled on per-document basis
@@ -85,7 +91,6 @@ can handle complex queries                      | technically simpler, easier to
 ---
 
 ## cap theorem
-### aka why
 
 ![[cap-theorem.png]]
 
